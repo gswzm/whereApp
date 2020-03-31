@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="NavigationBar">
+        <attr name="title" format="string" />
+        <!-- 按钮文字设置 -->
+        <attr name="right_tv_text" format="string" />
+        <attr name="right_iv_drawable" format="reference" />
+
+    </declare-styleable>
+
+
+    <declare-styleable name="ImageViewAppTheme">
+        <attr name="resourceId" format="reference" />
+    </declare-styleable>
+
+</resources>

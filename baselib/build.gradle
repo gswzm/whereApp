@@ -1,0 +1,90 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.jakewharton.butterknife'
+
+android {
+    compileSdkVersion deps.compile_sdk
+    buildToolsVersion deps.build_tools
+
+
+    defaultConfig {
+        minSdkVersion deps.min_sdk
+        targetSdkVersion deps.target_sdk
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    api deps.appcompat
+    api deps.recyclerview
+    api deps.constraint
+    api deps.design
+
+    //网络请求
+    api deps.retrofit
+    api deps.converter_gson
+    api deps.adapter_rxjava2
+    api deps.converter_scalars
+    api deps.okhttp3
+    api deps.gson
+    api deps.rxandroid
+    api deps.rxjava
+    //图片预览
+    api deps.PhotoView
+    //图片选择
+    api deps.PictureSelector
+    api deps.glide
+    //下拉刷新
+    api deps.SmartRefreshLayout
+    //事件总线
+    api deps.eventbus
+    /*U盟统计*/
+    api deps.umeng_com
+    api deps.umeng_an
+    api deps.tablayout
+    //    /*二维码扫描*/
+    //    api deps.bga_qrcode_zxing
+    //树形结构的库
+    api deps.treeview
+    //其他
+    api deps.pickview
+    //图形化库
+    api deps.mpandroidchart
+    api deps.bgabanner
+    //超大图显示控件
+    api deps.bigimageshow
+    //圆角图
+    api deps.roundedimageview
+    api deps.multidex
+    //二维码扫描
+    api deps.bga_qrcode_zxing
+    //gif库
+    api deps.android_gif_drawable
+    api deps.rxpermissions
+
+    api deps.flybanner
+    //butterknife
+    api deps.butterknife
+    annotationProcessor deps.butterknife_compiler
+    api deps.tbssdk
+    api deps.subsampling
+}

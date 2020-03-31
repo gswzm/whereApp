@@ -1,0 +1,2 @@
+rootProject.name='whereApp'
+include ':app', ':baselib'
