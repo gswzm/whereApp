@@ -1,4 +1,4 @@
-package com.wzm.whereapp;
+package com.wzm.whereapp.ui.eagle;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -19,6 +19,7 @@ import com.amap.api.track.query.model.LatestPointRequest;
 import com.amap.api.track.query.model.LatestPointResponse;
 import com.amap.api.track.query.model.QueryTerminalRequest;
 import com.amap.api.track.query.model.QueryTerminalResponse;
+import com.wzm.whereapp.R;
 import com.wzm.whereapp.util.Constants;
 import com.wzm.whereapp.util.SimpleOnTrackListener;
 

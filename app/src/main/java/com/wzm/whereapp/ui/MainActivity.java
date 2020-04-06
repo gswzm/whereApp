@@ -1,4 +1,4 @@
-package com.wzm.whereapp;
+package com.wzm.whereapp.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -20,6 +20,11 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 
 import com.amap.api.track.AMapTrackClient;
+import com.wzm.whereapp.R;
+import com.wzm.whereapp.ui.eagle.OtherSearchActivity;
+import com.wzm.whereapp.ui.eagle.TrackSearchActivity;
+import com.wzm.whereapp.ui.eagle.TrackServiceActivity;
+import com.wzm.whereapp.ui.sign.SignatureActivity;
 import com.wzm.whereapp.view.FeatureView;
 
 import java.util.HashMap;
@@ -38,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
         requestPermissionsIfAboveM();
 
-        setTitle("猎鹰sdk demo " + AMapTrackClient.getVersion());
+        setTitle("在哪儿" + AMapTrackClient.getVersion());
         ListView listView = findViewById(R.id.activity_main_list);
         ListAdapter adapter = new CustomArrayAdapter(
                 this.getApplicationContext(), demos);
@@ -146,6 +151,7 @@ public class MainActivity extends AppCompatActivity {
     private static final DemoDetails[] demos = {
             new DemoDetails("轨迹上报服务", "轨迹上报服务示例", TrackServiceActivity.class),
             new DemoDetails("轨迹查询", "轨迹查询示例", TrackSearchActivity.class),
-            new DemoDetails("实时位置及里程", "实时位置及行驶里程查询示例", OtherSearchActivity.class)
+            new DemoDetails("实时位置及里程", "实时位置及行驶里程查询示例", OtherSearchActivity.class),
+            new DemoDetails("电子签名", "进行电子签名保存", SignatureActivity.class)
     };
 }

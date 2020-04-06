@@ -1,4 +1,4 @@
-package com.wzm.whereapp;
+package com.wzm.whereapp.ui.eagle;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -33,10 +33,9 @@ import com.google.gson.JsonElement;
 import com.wzm.baselib.net.ActivityLifeCycleEvent;
 import com.wzm.baselib.net.netlistener.CallBackLis;
 import com.wzm.baselib.utils.LogUtils;
+import com.wzm.whereapp.R;
 import com.wzm.whereapp.http.RequestClient;
 import com.wzm.whereapp.util.Constants;
-import com.wzm.whereapp.util.DeviceIdUtils;
-import com.wzm.whereapp.util.GetAndroidIdUtil;
 import com.wzm.whereapp.util.SimpleOnTrackLifecycleListener;
 import com.wzm.whereapp.util.SimpleOnTrackListener;
 

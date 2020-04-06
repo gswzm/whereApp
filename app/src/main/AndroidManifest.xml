@@ -53,7 +53,7 @@
                 android:resource="@xml/external_path" />
         </provider>
         <!--主界面-->
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -61,14 +61,16 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".TrackServiceActivity"
+        <activity android:name=".ui.eagle.TrackServiceActivity"
             android:screenOrientation="fullSensor"/>
 
-        <activity android:name=".TrackSearchActivity"
+        <activity android:name=".ui.eagle.TrackSearchActivity"
             android:screenOrientation="fullSensor"
             android:windowSoftInputMode="stateHidden"/>
 
-        <activity android:name=".OtherSearchActivity"
+        <activity android:name=".ui.eagle.OtherSearchActivity"
+            android:screenOrientation="fullSensor"/>
+        <activity android:name=".ui.sign.SignatureActivity"
             android:screenOrientation="fullSensor"/>
     </application>
 
